@@ -1,0 +1,192 @@
+@use "global" as *;
+
+.campaign {
+  margin-top: 2.5rem;
+  overflow: hidden;
+  position: relative;
+  @include mq("md") {
+    margin-top: 7.3rem;
+  }
+}
+
+.campaign__cards {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  gap: 1.5rem;
+  @include mq("md") {
+    gap: 2.5rem;
+    margin-top: 1.78rem;
+  }
+}
+.campaign__card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  @include mq("md") {
+    max-width: 20.8rem;
+    width: 100%;
+  }
+}
+.campaign__contents {
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1.29rem;
+  padding-top: 0.99rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 auto;
+  @include mq("md") {
+    padding-bottom: 1.8rem;
+    padding-top: 1.5rem;
+  }
+}
+
+.campaign__box {
+  border-bottom: 1px solid $green;
+  flex-grow: 1;
+}
+
+.campaign__tag {
+  border: 1px solid $green;
+  display: inline-block;
+  padding: 0.179rem 0.75rem;
+  @include mq("md") {
+    padding: 0.29rem 1.1rem;
+  }
+}
+.campaign__category {
+  color: $green;
+  font-size: 0.75rem;
+  font-weight: $regular;
+  line-height: 1.88;
+  font-family: $second-font-family;
+}
+
+.campaign__description {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding-top: 0.5rem;
+  padding-bottom: 0.4rem;
+  @include mq("md") {
+    padding-top: 0.5rem;
+  }
+}
+
+.campaign__container {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq("md") {
+    margin-top: 1.21rem;
+  }
+}
+
+.campaign__price-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.campaign__text {
+  font-size: 0.875rem;
+  font-weight: $regular;
+  line-height: 1.5rem;
+  color: $black;
+  @include mq("md") {
+    font-size: 1.03rem;
+  }
+}
+.campaign__price-out {
+  font-size: 1.25rem;
+  font-weight: $bold;
+  font-family: $four-font-family;
+  text-decoration: line-through red;
+  padding-left: 0.2rem;
+  padding-top: 0.5rem;
+}
+
+.campaign__price-in {
+  padding-left: 1rem;
+  font-size: 2rem;
+  font-weight: $bold;
+  font-family: $four-font-family;
+  color: $green;
+  @include mq("md") {
+    font-size: 2.43rem;
+    padding-left: 2.6rem;
+  }
+}
+
+.campaign__contact {
+  margin-top: 0.8rem;
+  text-align: center;
+  @include mq("md") {
+    margin-top: 4.8rem;
+  }
+}
+
+.swiper2 {
+  margin-right: calc(77% - 53vw);
+  @include mq("md") {
+    margin-right: calc(50% - 50vw);
+  }
+}
+
+.campaign__title {
+  position: relative;
+}
+.campaign__wrap {
+  @include mq("md") {
+    position: absolute;
+    right: 12%;
+    top: 4%;
+    display: flex;
+    justify-content: space-between;
+    width: 16rem;
+  }
+}
+
+.campaign__next.swiper-button-next,
+.campaign__prev.swiper-button-prev {
+  @include mq("md") {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+/* 前へ次への矢印カスタマイズ */
+.campaign__next.swiper-button-next::after,
+.campaign__prev.swiper-button-prev::after {
+  @include mq("md") {
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: 5rem;
+    margin: auto;
+    width: 5rem;
+  }
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+  @include mq("md") {
+    background-image: url(../images/common/campaign-prev.svg);
+  }
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+  @include mq("md") {
+    background-image: url(../images/common/campaign-next.svg);
+  }
+}
+/* 画像サイズ調整 */
+.swiper-slide img {
+  aspect-ratio: 280/188;
+  height: auto;
+  width: 100%;
+  @include mq("md") {
+    aspect-ratio: 333/223;
+  }
+}
